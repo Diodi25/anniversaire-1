@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🎀 お誕生日おめでとう 🎀</title>
+
+<style>
+body{
+  margin:0; min-height:100vh; display:grid; place-items:center;
+  font-family:"Comic Sans MS","Segoe UI",system-ui,sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, #ffd6e8 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, #ffe6f2 0%, transparent 40%),
+    linear-gradient(180deg, #fff0f7, #ffffff);
+}
+
+.card{
+  width:min(900px,92vw);
+  background:#fff;
+  border-radius:30px;
+  padding:24px;
+  border:3px solid #ffb6d5;
+  box-shadow:0 20px 50px rgba(255,105,180,.25);
+  text-align:center;
+}
+
+.badge{
+  background:#ff69b4;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:999px;
+  font-weight:700;
+  display:inline-block;
+}
+
+h1{ color:#ff4fa1; margin:14px 0 6px; }
+p{ color:#666; margin:0 0 18px; }
+
+.frame{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:24px;
+  overflow:hidden;
+  border:3px dashed #ffd1e8;
+  background:#fff0f7;
+  display:grid;
+  place-items:center;
+}
+
+button{
+  background:#ff69b4;
+  color:#fff;
+  border:none;
+  padding:16px 26px;
+  font-size:18px;
+  border-radius:999px;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(255,105,180,.45);
+  transition:.2s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  background:#ff4fa1;
+}
+
+iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.footer{
+  margin-top:14px;
+  font-size:13px;
+  color:#888;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+</style>
+</head>
+
+<body>
+<main class="card">
+  <div class="badge">🎀 お誕生日おめでとう 🎀</div>
+  <h1>Joyeux anniversaire 💕</h1>
+  <p>Clique sur le bouton pour ta surprise 🎁</p>
+
+  <div class="frame" id="videoContainer">
+    <button onclick="playVideo()">▶ Lancer la vidéo 🎀</button>
+  </div>
+
+  <div class="footer">
+    <span>🌸 Style kawaii japonais</span>
+    <span>🎥 Vidéo surprise</span>
+  </div>
+</main>
+
+<script>
+function playVideo(){
+  const container = document.getElementById("videoContainer");
+  container.innerHTML = `
+    <iframe
+      src="https://drive.google.com/file/d/1wyna91cr2Fd8RapwB7vzBHmZWMXihtk-/preview"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  `;
+}
+</script>
+</body>
+</html>
